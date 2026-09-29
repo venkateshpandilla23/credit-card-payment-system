@@ -1,0 +1,65 @@
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+
+<h1>Daily Payment Summary</h1>
+
+<h2>Date: {{ today }}</h2>
+
+<table style="border-collapse: collapse; width: 70%; margin-top: 20px;">
+    <tr>
+        <th style="border: 1px solid #ccc; padding: 10px; text-align: left;">
+            Metric
+        </th>
+        <th style="border: 1px solid #ccc; padding: 10px; text-align: left;">
+            Value
+        </th>
+    </tr>
+
+    <tr>
+        <td style="border: 1px solid #ccc; padding: 10px;">
+            Total Transactions
+        </td>
+        <td style="border: 1px solid #ccc; padding: 10px;">
+            {{ total_transactions }}
+        </td>
+    </tr>
+
+    <tr>
+        <td style="border: 1px solid #ccc; padding: 10px;">
+            Successful Payments
+        </td>
+        <td style="border: 1px solid #ccc; padding: 10px;">
+            {{ successful_payments }}
+        </td>
+    </tr>
+
+    <tr>
+        <td style="border: 1px solid #ccc; padding: 10px;">
+            Failed Payments
+        </td>
+        <td style="border: 1px solid #ccc; padding: 10px;">
+            {{ failed_payments }}
+        </td>
+    </tr>
+
+    <tr>
+        <td style="border: 1px solid #ccc; padding: 10px;">
+            Pending Payments
+        </td>
+        <td style="border: 1px solid #ccc; padding: 10px;">
+            {{ pending_payments }}
+        </td>
+    </tr>
+
+    <tr>
+        <td style="border: 1px solid #ccc; padding: 10px;">
+            Total Amount
+        </td>
+        <td style="border: 1px solid #ccc; padding: 10px;">
+            ₹{{ total_amount }}
+        </td>
+    </tr>
+</table>
+
+{% endblock %}
